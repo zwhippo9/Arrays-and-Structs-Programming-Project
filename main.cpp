@@ -46,21 +46,21 @@ void getData(ifstream& inf, Runner runners[], int count) {
 
 //to print data
 void printData(const Runner runners[], int count) {
-    cout << setw(12) << "Name"; 
+    cout << setw(6) << "Name"; 
     for (int j = 0; j < d; j++) {
-        cout << setw(12) << "Day " << (j + 1);
+        cout << setw(10) << "Day " << (j + 1);
 }
-    cout << setw(12) << "Total" << setw(12) << "Average" << endl;
+    cout << setw(10) << "Total" << setw(12) << "Average" << endl;
 
     for (int i = 0; i < count; i++)  {
         double totalMiles = 0; //total miles for each runner
-        cout << setw(12) << runners[i].name; //print name
+        cout << setw(10) << runners[i].name; //print name
         for (int j = 0; j < d; j++) {
-           cout << setw(12) << fixed << setprecision(2) << runners[i].miles[j]; //print miles per day
+           cout << setw(10) << fixed << setprecision(2) << runners[i].miles[j]; //print miles per day
         }
         double avgMiles = totalMiles / d; //average miles per day        
-        cout << setw(12) << fixed << setprecision(2) << totalMiles; 
-        cout << setw(12) << fixed << setprecision(2) << avgMiles << endl;
+        cout << setw(10) << fixed << setprecision(2) << totalMiles; 
+        cout << setw(10) << fixed << setprecision(2) << avgMiles << endl;
         cout << endl;
     }
 }
